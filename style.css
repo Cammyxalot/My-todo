@@ -1,6 +1,7 @@
-
-@import url('http://fonts.cdnfonts.com/css/goldman');
-
+@font-face {
+    font-family: 'Goldman';
+    src: url('Goldman-Regular.ttf');
+}
 
 * {
     margin: 0;
