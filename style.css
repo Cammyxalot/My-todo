@@ -1,0 +1,156 @@
+
+@import url('http://fonts.cdnfonts.com/css/goldman');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Goldman', sans-serif;
+}
+
+:root {
+    --gradient: linear-gradient(45deg,#150734, #0622D4);
+    --klein: #0622D4;
+    --russian: #150734;
+    --russian-hover: rgba(21, 7, 52, 0.5);
+}
+
+body {
+    background: var(--gradient);
+    animation: 5s infinite alternate ;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header,
+form {
+    min-height:20vh ;
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    font-size: 4em;
+}
+
+.todo-input {
+    width: 560px;
+}
+
+form input, form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    background-color: white;
+    border: none;
+}
+
+.toggle-select {
+    margin: 1rem;
+    font-size: 1.5rem;
+    width: max-content;
+}
+
+select {
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0;
+    background-image: none;
+    cursor: pointer;
+}
+
+.toggle-select::after{
+    content: "\25BC";
+    position: absolute;
+    background-color: var(--russian);
+}
+
+form button {
+    color: #f3c11d;
+    background-color: #f7fffe;
+    cursor: pointer;
+    
+}
+
+form button:hover {
+    color: var(--russian);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    margin: 1rem;
+    transition: 0.5s;
+}
+
+.container.deleted {
+    transform: scale(0);
+}
+
+.todo {
+    margin-right: 1rem;
+    height: 56px;
+    background: white;
+    min-width: 30vw;
+    list-style: none;
+    background-size: 100%;
+    font-size: 1.5rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s ease;
+    box-shadow: 0px 25px 50px 0px rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.todo-item {
+    text-align: center;
+}
+
+.fa-trash-alt,
+.fa-check {
+    pointer-events: none;
+}
+
+.trash-Btn,.complete-Btn {
+    height: 56px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    padding: 1rem;
+    background:#f3c11d;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.trash-Btn:hover,.complete-Btn:hover {
+    background-color: var(--russian-hover);
+}
+
+.complete-Btn {
+    margin-right: 1rem;
+}
+
+.complete-Btn.completed {
+ background-color: var(--russian);
+}
